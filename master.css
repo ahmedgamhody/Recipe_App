@@ -1,0 +1,151 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+}
+
+.container .up {
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .up input {
+  padding: 10px 15px;
+  border-radius: 8px;
+  outline: none;
+  font-weight: bold;
+  border: none;
+  width: 300px;
+}
+.container .up button {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #4e4feb;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  transition: 0.4s;
+}
+
+.container .up button:hover {
+  background-color: #068fff;
+}
+
+.container .down {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  width: 80%;
+  margin: 150px auto 50px;
+}
+
+.container .down img {
+  max-width: 100%;
+  height: 250px;
+}
+
+.container .down .box {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  padding: 25px 15px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.container .down .imag {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.container .down h3 {
+  margin: 15px 0;
+}
+
+.container .down button {
+  border: none;
+  padding: 10px 0;
+  border-radius: 8px;
+  color: white;
+  background-color: #4e4feb;
+  font-weight: bold;
+  width: 130px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.container .down button:hover {
+  background-color: #068fff;
+}
+
+.container .shape {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 0 35px;
+  display: none;
+  animation: zooming 0.3s;
+}
+
+.container .shape .left {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container .shape h3 {
+  color: #ffeb3b;
+  font-size: 45px;
+  text-align: left;
+}
+
+.container .shape p {
+  color: #eee;
+  margin-top: 20px;
+  width: 90%;
+}
+
+.container .shape i {
+  position: absolute;
+  color: red;
+  top: 35px;
+  right: 35px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.container .shape .right {
+  height: 100vh;
+  align-items: center;
+  display: flex;
+}
+
+.right img {
+  border-radius: 12px;
+}
+
+@keyframes zooming {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
